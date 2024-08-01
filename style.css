@@ -39,7 +39,7 @@ body {
   0%,
   25% {
     :root {
-      --cube-color: #00ce00; /* Initial green color */
+      --cube-color: #00ce00; 
       --cube-shadow: #00ff00;
     }
   }
