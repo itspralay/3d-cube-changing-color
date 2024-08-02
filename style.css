@@ -1,6 +1,6 @@
 :root {
   --cube-color: #00ce00; /* Initial green color */
-  --cube-shadow: #00ff00;
+  --cube-shadow: rgba(0, 255, 0, 1);
 }
 
 * {
@@ -23,7 +23,7 @@ body {
   height: 300px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
-  animation: rotate 3s linear infinite, colorChange 12s linear infinite;
+  animation: rotate 4s linear infinite, colorChange 12s linear infinite;
 }
 
 @keyframes rotate {
@@ -36,33 +36,21 @@ body {
 }
 
 @keyframes colorChange {
-  0%,
-  25% {
-    :root {
-      --cube-color: #00ce00; 
-      --cube-shadow: #00ff00;
-    }
+  0%, 25% {
+    --cube-color: #00ce00; /* Green */
+    --cube-shadow: rgba(0, 255, 0, 1);
   }
-  26%,
-  50% {
-    :root {
-      --cube-color: #ff0000;
-      --cube-shadow: #ff0000;
-    }
+  26%, 50% {
+    --cube-color: #ff0000; /* Red */
+    --cube-shadow: rgba(255, 0, 0, 1);
   }
-  51%,
-  75% {
-    :root {
-      --cube-color: #0000ff;
-      --cube-shadow: #0000ff;
-    }
+  51%, 75% {
+    --cube-color: #0000ff; /* Blue */
+    --cube-shadow: rgba(0, 0, 255, 1);
   }
-  76%,
-  100% {
-    :root {
-      --cube-color: #ffff00;
-      --cube-shadow: #ffff00;
-    }
+  76%, 100% {
+    --cube-color: #ffff00; /* Yellow */
+    --cube-shadow: rgba(255, 255, 0, 1);
   }
 }
 
@@ -96,7 +84,7 @@ body {
 }
 
 .top::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -106,6 +94,8 @@ body {
   transform: translateZ(-380px);
   filter: blur(20px);
   box-shadow: 0 0 120px var(--cube-shadow, 0.2),
-    0 0 200px var(--cube-shadow, 0.4), 0 0 300px var(--cube-shadow, 0.6),
-    0 0 400px var(--cube-shadow, 0.8), 0 0 500px var(--cube-shadow, 1);
+              0 0 200px var(--cube-shadow, 0.4),
+              0 0 300px var(--cube-shadow, 0.6),
+              0 0 400px var(--cube-shadow, 0.8),
+              0 0 500px var(--cube-shadow, 1);
 }
