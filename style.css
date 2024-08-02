@@ -1,5 +1,5 @@
 :root {
-  --cube-color: #00ce00; /* Initial green color */
+  --cube-color: #00ce00; 
   --cube-shadow: rgba(0, 255, 0, 1);
 }
 
@@ -37,19 +37,19 @@ body {
 
 @keyframes colorChange {
   0%, 25% {
-    --cube-color: #00ce00; /* Green */
+    --cube-color: #00ce00; 
     --cube-shadow: rgba(0, 255, 0, 1);
   }
   26%, 50% {
-    --cube-color: #ff0000; /* Red */
+    --cube-color: #ff0000; 
     --cube-shadow: rgba(255, 0, 0, 1);
   }
   51%, 75% {
-    --cube-color: #0000ff; /* Blue */
+    --cube-color: #0000ff; 
     --cube-shadow: rgba(0, 0, 255, 1);
   }
   76%, 100% {
-    --cube-color: #ffff00; /* Yellow */
+    --cube-color: #ffff00; 
     --cube-shadow: rgba(255, 255, 0, 1);
   }
 }
